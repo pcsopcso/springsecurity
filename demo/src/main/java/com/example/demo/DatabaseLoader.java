@@ -19,7 +19,6 @@ import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import com.example.model.User;
@@ -45,12 +44,12 @@ public class DatabaseLoader implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
         Arrays.asList(
-                new User("토니 스타크", "ironman", "아이언맨"),
-                new User("브루스 배너", "hulk", "헐크"),
-                new User("스콧", "antman", "엔트맨"),
-                new User("크리스 헴스워스", "tor", "천둥의 신"),
-                new User("스칼릿 조핸슨", "backwidow", "블랙위도우"),
-                new User("클린트 바튼", "Hawkeye", "호크아이")
+                new User("토니 스타크", "ironman", "ironman"),
+                new User("브루스 배너", "hulk", "hulk"),
+                new User("스콧", "antman", "antman"),
+                new User("크리스 헴스워스", "tor", "tor"),
+                new User("스칼릿 조핸슨", "backwidow", "backwidow"),
+                new User("클린트 바튼", "hawkeye", "hawkeye")
         )
     	.forEach(account -> userRepository.save(account));
         userRepository.findAll().forEach(System.out::println);
