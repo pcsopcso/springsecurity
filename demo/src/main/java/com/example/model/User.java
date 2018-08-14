@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor //추가 모든 필드가 있는 생성자를 만든다.
 @NoArgsConstructor(access = AccessLevel.PRIVATE)  //추가 디폴트 생성자를 만든다. 이놈이 필요한이유는 JPA 덕분 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Member implements Serializable {
+public class User implements Serializable {
 	/**
 	 * 
 	 */
@@ -31,7 +31,7 @@ public class Member implements Serializable {
 	String name;
 	String username;
 	String remark;
-	public Member(String name, String username, String remark) {
+	public User(String name, String username, String remark) {
 	this.name = name;
 	this.username = username;
 	this.remark = remark;
